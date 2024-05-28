@@ -17,7 +17,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
   <div class="container">
   <div class="progress-bar">MÉTODO&gt; <strong>INFORMAÇÕES</strong>&gt; CONCLUÍDO</div>
   <h2>Suas informações</h2>
-  <form>
+  <form action= "/pagamento" method="post">
     <div class="form-group">
       <label for="situation">Selecione sua situação:</label>
       <div class="radio-buttons">
@@ -38,7 +38,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </div>
     <div class="form-group" id="campo-cpf">
       <div class="inline-group">
-        <label for="cpf">CPF/CNPJ:</label>
+        <label for="cpf">CPF:</label>
         <input type="text" id="cpfInput" name="cpf" maxlength="14" onkeypress="formatarCPF(event)">
       </div>
     </div>
@@ -47,7 +47,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     <div class="inline-group">
       <label for="payment-method">Forma de Pagamento:</label>
       <div class="select-wrapper">
-        <select name="payment-method" id="payment-method">
+        <select name="payment" id="payment-method">
           <option value=""></option>
           <option value="boleto">Boleto</option>
           <option value="debit-card">Cartão de Débito</option>
@@ -71,12 +71,13 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       </div>
     </div>
   </div>
-  </form>
-         
-  <div class="form-group-text-center">
+    <div class="form-group-text-center">
     <button id="submit-button">Efetuar Pagamento</button>
   </div>
 </div>
+  </form>
+         
+
 
 </section>
 

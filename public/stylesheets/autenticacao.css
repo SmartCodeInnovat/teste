@@ -11,9 +11,26 @@ body{
     background-image: url('/images/backgound.jpg');
     background-size: cover;
     min-height: 100vh;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+.message{
+    display:flex;
+    align-items: center;
+    justify-content: space-between !important; 
+    width: 100%;
+    padding: 1%;
+    position: absolute;
+    top:0;
+    z-index: 10000000;
+    background-color: rgb(245, 92, 92);
+    color:#8a0000;
+    margin-bottom:5px;
+    font-weight: large;
+    font-size: 20px;
 }
 
 .container{
@@ -207,6 +224,10 @@ input[type="novasenha"]::placeholder {
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+    }
+
+    .message{
+        padding:3%;
     }
 
     .titulo{
