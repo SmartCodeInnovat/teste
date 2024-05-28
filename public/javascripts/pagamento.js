@@ -1,18 +1,20 @@
 //Ocultar campo
-function mostrarOcultarCPF() {
+function mostrarOcultarFullname() {
   var opcaoSelecionada = document.querySelector(
     'input[name="situation"]:checked'
   ).value;
-  var campoCPF = document.getElementById("campo-cpf");
+  var campoNome = document.getElementById("fullname");
+  var labelNome = document.getElementById("label-fullname");
 
   if (opcaoSelecionada === "first-time") {
-    campoCPF.style.display = "block";
+    campoNome.style.display = "block";
   } else {
-    campoCPF.style.display = "none";
+    campoNome.style.display = "none";
+    labelNome.style.display = "none";
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
-  mostrarOcultarCPF();
+  mostrarOcultarFullname();
 });
 //Footer
 window.addEventListener("scroll", function () {
