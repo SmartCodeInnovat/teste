@@ -2,27 +2,39 @@ const mongoose = require("mongoose");
 const connect = mongoose.connect("mongodb+srv://juliadantas24:josebaruk@cluster0.5vizxvz.mongodb.net/doaweb");
 
 connect.then(()=>{
-
 })
 .catch(()=>{
     console.log("Database connected error");
 });
 
-const LoginSchema = new mongoose.Schema({
+const donationSchema = new mongoose.Schema({
     name:{
         type: String,
         required: true
     },
-    email:{
+    cpf:{
         type:String,
         required:true
     },
-    password:{
+    method:{
         type: String,
         required:true
+    },
+    value:{
+        type: String,
+        required:true
+    },
+    date:{
+        type: String,
+        required:true
+    },
+    event:{
+        type:Array,
+        required:true
+    }    
     }
-});
+);
 
-const collection  = new mongoose.model("users", LoginSchema);
+const donation  = new mongoose.model("doacao", donationSchema);
 
-module.exports = collection;
+module.exports = donation;

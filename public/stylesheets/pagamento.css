@@ -8,6 +8,23 @@ body {
   padding: 0;
 }
 
+.message{
+  display:flex;
+  align-items: center;
+  justify-content: space-between !important; 
+  width: 100%;
+  padding: 1%;
+  position: absolute;
+  top:0;
+  z-index: 10000000;
+  background-color: rgb(245, 92, 92);
+  color:#8a0000;
+  margin-bottom:5px;
+  font-weight: large;
+  font-size: 20px;
+}
+
+
 .conteudo{
   margin:4vh 0;
 }
